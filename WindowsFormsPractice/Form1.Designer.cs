@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsPractice
+namespace WindowsFormsPractice
 {
     partial class Form1
     {
