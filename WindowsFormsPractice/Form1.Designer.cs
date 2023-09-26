@@ -69,6 +69,7 @@
             btnImagesList.TabIndex = 9;
             btnImagesList.Text = "Images list";
             btnImagesList.UseVisualStyleBackColor = true;
+            btnImagesList.Click += btnImagesList_Click;
             // 
             // btnColorRange
             // 
@@ -78,6 +79,7 @@
             btnColorRange.TabIndex = 8;
             btnColorRange.Text = "Color range";
             btnColorRange.UseVisualStyleBackColor = true;
+            btnColorRange.Click += btnColorRange_Click;
             // 
             // btnTimer
             // 
@@ -87,6 +89,7 @@
             btnTimer.TabIndex = 7;
             btnTimer.Text = "Timer";
             btnTimer.UseVisualStyleBackColor = true;
+            btnTimer.Click += btnTimer_Click;
             // 
             // btnCalendars
             // 
@@ -96,6 +99,7 @@
             btnCalendars.TabIndex = 6;
             btnCalendars.Text = "Calendars";
             btnCalendars.UseVisualStyleBackColor = true;
+            btnCalendars.Click += btnCalendars_Click;
             // 
             // btnComboBox
             // 
@@ -105,6 +109,7 @@
             btnComboBox.TabIndex = 5;
             btnComboBox.Text = "ComboBox";
             btnComboBox.UseVisualStyleBackColor = true;
+            btnComboBox.Click += btnComboBox_Click;
             // 
             // btnBoxes
             // 
@@ -114,6 +119,7 @@
             btnBoxes.TabIndex = 4;
             btnBoxes.Text = "Boxes";
             btnBoxes.UseVisualStyleBackColor = true;
+            btnBoxes.Click += btnBoxes_Click;
             // 
             // btnList
             // 
@@ -123,6 +129,7 @@
             btnList.TabIndex = 3;
             btnList.Text = "List";
             btnList.UseVisualStyleBackColor = true;
+            btnList.Click += btnList_Click;
             // 
             // btnColors
             // 
@@ -132,6 +139,7 @@
             btnColors.TabIndex = 2;
             btnColors.Text = "Colors";
             btnColors.UseVisualStyleBackColor = true;
+            btnColors.Click += btnColors_Click;
             // 
             // btnTtriangle
             // 
@@ -141,6 +149,7 @@
             btnTtriangle.TabIndex = 1;
             btnTtriangle.Text = "Triangle";
             btnTtriangle.UseVisualStyleBackColor = true;
+            btnTtriangle.Click += btnTtriangle_Click;
             // 
             // btnTextBox
             // 
@@ -150,7 +159,7 @@
             btnTextBox.TabIndex = 0;
             btnTextBox.Text = "TextBox";
             btnTextBox.UseVisualStyleBackColor = true;
-            btnTextBox.Click += button1_Click;
+            btnTextBox.Click += btnTextBox_Click;
             // 
             // lblWelcome
             // 
