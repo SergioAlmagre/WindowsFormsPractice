@@ -13,7 +13,7 @@ namespace WindowsFormsPractice
             {
                 if (MdiChildren[0].Name != "TexBox")
                 {
-                    DialogResult rs = MessageBox.Show("¿Do you whish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult rs = MessageBox.Show("¿Do you wish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rs == DialogResult.Yes)
                     {
                         // Problem: Windows are overlapping
@@ -23,7 +23,6 @@ namespace WindowsFormsPractice
                         frmTexbox.Show();
                     }
                 }
-
             }
             else
             {
