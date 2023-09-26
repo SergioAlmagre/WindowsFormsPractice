@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            btnTextBox = new Button();
-            btnTtriangle = new Button();
-            btnColors = new Button();
-            btnList = new Button();
-            btnBoxes = new Button();
-            btnComboBox = new Button();
-            btnCalendars = new Button();
-            btnTimer = new Button();
-            btnColorRange = new Button();
             btnImagesList = new Button();
+            btnColorRange = new Button();
+            btnTimer = new Button();
+            btnCalendars = new Button();
+            btnComboBox = new Button();
+            btnBoxes = new Button();
+            btnList = new Button();
+            btnColors = new Button();
+            btnTtriangle = new Button();
+            btnTextBox = new Button();
+            lblWelcome = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,78 +61,14 @@
             panel1.Size = new Size(188, 559);
             panel1.TabIndex = 0;
             // 
-            // btnTextBox
+            // btnImagesList
             // 
-            btnTextBox.Location = new Point(27, 33);
-            btnTextBox.Name = "btnTextBox";
-            btnTextBox.Size = new Size(129, 29);
-            btnTextBox.TabIndex = 0;
-            btnTextBox.Text = "TextBox";
-            btnTextBox.UseVisualStyleBackColor = true;
-            btnTextBox.Click += button1_Click;
-            // 
-            // btnTtriangle
-            // 
-            btnTtriangle.Location = new Point(27, 84);
-            btnTtriangle.Name = "btnTtriangle";
-            btnTtriangle.Size = new Size(129, 29);
-            btnTtriangle.TabIndex = 1;
-            btnTtriangle.Text = "Triangle";
-            btnTtriangle.UseVisualStyleBackColor = true;
-            // 
-            // btnColors
-            // 
-            btnColors.Location = new Point(27, 132);
-            btnColors.Name = "btnColors";
-            btnColors.Size = new Size(129, 29);
-            btnColors.TabIndex = 2;
-            btnColors.Text = "Colors";
-            btnColors.UseVisualStyleBackColor = true;
-            // 
-            // btnList
-            // 
-            btnList.Location = new Point(27, 183);
-            btnList.Name = "btnList";
-            btnList.Size = new Size(129, 29);
-            btnList.TabIndex = 3;
-            btnList.Text = "List";
-            btnList.UseVisualStyleBackColor = true;
-            // 
-            // btnBoxes
-            // 
-            btnBoxes.Location = new Point(27, 234);
-            btnBoxes.Name = "btnBoxes";
-            btnBoxes.Size = new Size(129, 29);
-            btnBoxes.TabIndex = 4;
-            btnBoxes.Text = "Boxes";
-            btnBoxes.UseVisualStyleBackColor = true;
-            // 
-            // btnComboBox
-            // 
-            btnComboBox.Location = new Point(27, 285);
-            btnComboBox.Name = "btnComboBox";
-            btnComboBox.Size = new Size(129, 29);
-            btnComboBox.TabIndex = 5;
-            btnComboBox.Text = "ComboBox";
-            btnComboBox.UseVisualStyleBackColor = true;
-            // 
-            // btnCalendars
-            // 
-            btnCalendars.Location = new Point(27, 334);
-            btnCalendars.Name = "btnCalendars";
-            btnCalendars.Size = new Size(129, 29);
-            btnCalendars.TabIndex = 6;
-            btnCalendars.Text = "Calendars";
-            btnCalendars.UseVisualStyleBackColor = true;
-            // 
-            // btnTimer
-            // 
-            btnTimer.Location = new Point(27, 384);
-            btnTimer.Name = "btnTimer";
-            btnTimer.Size = new Size(129, 29);
-            btnTimer.TabIndex = 7;
-            btnTimer.Text = "Timer";
-            btnTimer.UseVisualStyleBackColor = true;
+            btnImagesList.Location = new Point(27, 484);
+            btnImagesList.Name = "btnImagesList";
+            btnImagesList.Size = new Size(129, 29);
+            btnImagesList.TabIndex = 9;
+            btnImagesList.Text = "Images list";
+            btnImagesList.UseVisualStyleBackColor = true;
             // 
             // btnColorRange
             // 
@@ -142,26 +79,102 @@
             btnColorRange.Text = "Color range";
             btnColorRange.UseVisualStyleBackColor = true;
             // 
-            // btnImagesList
+            // btnTimer
             // 
-            btnImagesList.Location = new Point(27, 484);
-            btnImagesList.Name = "btnImagesList";
-            btnImagesList.Size = new Size(129, 29);
-            btnImagesList.TabIndex = 9;
-            btnImagesList.Text = "Images list";
-            btnImagesList.UseVisualStyleBackColor = true;
+            btnTimer.Location = new Point(27, 384);
+            btnTimer.Name = "btnTimer";
+            btnTimer.Size = new Size(129, 29);
+            btnTimer.TabIndex = 7;
+            btnTimer.Text = "Timer";
+            btnTimer.UseVisualStyleBackColor = true;
+            // 
+            // btnCalendars
+            // 
+            btnCalendars.Location = new Point(27, 334);
+            btnCalendars.Name = "btnCalendars";
+            btnCalendars.Size = new Size(129, 29);
+            btnCalendars.TabIndex = 6;
+            btnCalendars.Text = "Calendars";
+            btnCalendars.UseVisualStyleBackColor = true;
+            // 
+            // btnComboBox
+            // 
+            btnComboBox.Location = new Point(27, 285);
+            btnComboBox.Name = "btnComboBox";
+            btnComboBox.Size = new Size(129, 29);
+            btnComboBox.TabIndex = 5;
+            btnComboBox.Text = "ComboBox";
+            btnComboBox.UseVisualStyleBackColor = true;
+            // 
+            // btnBoxes
+            // 
+            btnBoxes.Location = new Point(27, 234);
+            btnBoxes.Name = "btnBoxes";
+            btnBoxes.Size = new Size(129, 29);
+            btnBoxes.TabIndex = 4;
+            btnBoxes.Text = "Boxes";
+            btnBoxes.UseVisualStyleBackColor = true;
+            // 
+            // btnList
+            // 
+            btnList.Location = new Point(27, 183);
+            btnList.Name = "btnList";
+            btnList.Size = new Size(129, 29);
+            btnList.TabIndex = 3;
+            btnList.Text = "List";
+            btnList.UseVisualStyleBackColor = true;
+            // 
+            // btnColors
+            // 
+            btnColors.Location = new Point(27, 132);
+            btnColors.Name = "btnColors";
+            btnColors.Size = new Size(129, 29);
+            btnColors.TabIndex = 2;
+            btnColors.Text = "Colors";
+            btnColors.UseVisualStyleBackColor = true;
+            // 
+            // btnTtriangle
+            // 
+            btnTtriangle.Location = new Point(27, 84);
+            btnTtriangle.Name = "btnTtriangle";
+            btnTtriangle.Size = new Size(129, 29);
+            btnTtriangle.TabIndex = 1;
+            btnTtriangle.Text = "Triangle";
+            btnTtriangle.UseVisualStyleBackColor = true;
+            // 
+            // btnTextBox
+            // 
+            btnTextBox.Location = new Point(27, 33);
+            btnTextBox.Name = "btnTextBox";
+            btnTextBox.Size = new Size(129, 29);
+            btnTextBox.TabIndex = 0;
+            btnTextBox.Text = "TextBox";
+            btnTextBox.UseVisualStyleBackColor = true;
+            btnTextBox.Click += button1_Click;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Bookman Old Style", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWelcome.Location = new Point(473, 224);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(383, 90);
+            lblWelcome.TabIndex = 3;
+            lblWelcome.Text = "Welcome";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1139, 559);
+            Controls.Add(lblWelcome);
             Controls.Add(panel1);
             IsMdiContainer = true;
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -177,5 +190,6 @@
         private Button btnColorRange;
         private Button btnTimer;
         private Button btnCalendars;
+        private Label lblWelcome;
     }
 }
