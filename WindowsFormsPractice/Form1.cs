@@ -9,11 +9,31 @@ namespace WindowsFormsPractice
 
         private void btnTextBox_Click(object sender, EventArgs e)
         {
-            lblWelcome.Hide();
-            TextBox frmTexbox = new TextBox();
-            frmTexbox.MdiParent = this;
-            frmTexbox.Dock = DockStyle.Fill;
-            frmTexbox.Show();
+            if (this.MdiChildren.Length > 0)
+            {
+                if (MdiChildren[0].Name != "TexBox")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you whish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        // Problem: Windows are overlapping
+                        TextBox frmTexbox = new TextBox();
+                        frmTexbox.MdiParent = this;
+                        frmTexbox.Dock = DockStyle.Fill;
+                        frmTexbox.Show();
+                    }
+                }
+
+            }
+            else
+            {
+                lblWelcome.Hide();
+                TextBox frmTexbox = new TextBox();
+                frmTexbox.MdiParent = this;
+                frmTexbox.Dock = DockStyle.Fill;
+                frmTexbox.Show();
+            }
+           
         }
 
         private void btnTtriangle_Click(object sender, EventArgs e)

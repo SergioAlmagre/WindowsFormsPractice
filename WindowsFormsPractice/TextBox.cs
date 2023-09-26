@@ -17,39 +17,50 @@ namespace WindowsFormsPractice
             InitializeComponent();
         }
 
-        private void TextBox_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNextFocus_Click(object sender, EventArgs e)
         {
-
+            txtMusic.Focus();
         }
 
         private void btnWriter_Click(object sender, EventArgs e)
         {
-
+            FormTxtBox newFormTxt = new FormTxtBox(txtMusic.Text, txtName.Text, txtSecondName.Text, txtPassword.Text);
+            InterWindow.formTxtBoxSingle = newFormTxt;
+            if (txtName.ReadOnly == true)
+            {
+                txtName.ReadOnly = false;
+            }
+            else
+            {
+                txtName.ReadOnly = true;
+            }
+            
         }
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
-
+            if (txtSecondName.Enabled == true)
+            {
+                txtSecondName.Enabled = false;
+            }
+            else
+            {
+                txtSecondName.Enabled = true;
+            }
+            
         }
 
         private void btnMakeVisible_Click(object sender, EventArgs e)
         {
+            if (txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
 
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }

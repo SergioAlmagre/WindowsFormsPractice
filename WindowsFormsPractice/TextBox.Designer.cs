@@ -36,6 +36,7 @@
             txtName = new System.Windows.Forms.TextBox();
             txtSecondName = new System.Windows.Forms.TextBox();
             txtPassword = new System.Windows.Forms.TextBox();
+            txtPassword.PasswordChar = '*';
             btnNextFocus = new Button();
             btnWriter = new Button();
             btnActivate = new Button();
@@ -50,7 +51,7 @@
             lblMusic.Size = new Size(50, 20);
             lblMusic.TabIndex = 0;
             lblMusic.Text = "Music:";
-            lblMusic.Click += label1_Click;
+            
             // 
             // lblName
             // 
@@ -60,7 +61,6 @@
             lblName.Size = new Size(52, 20);
             lblName.TabIndex = 1;
             lblName.Text = "Name:";
-            lblName.Click += label1_Click_1;
             // 
             // lblSecondName
             // 
@@ -169,7 +169,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "TextBox";
             Text = "TextBox";
-            Load += TextBox_Load;
             ResumeLayout(false);
             PerformLayout();
         }
