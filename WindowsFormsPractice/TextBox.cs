@@ -31,5 +31,25 @@ namespace WindowsFormsPractice
         {
 
         }
+
+        private void btnNextFocus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnWriter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMakeVisible_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

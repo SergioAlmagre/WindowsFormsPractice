@@ -117,6 +117,7 @@
             btnNextFocus.TabIndex = 8;
             btnNextFocus.Text = "Next focus";
             btnNextFocus.UseVisualStyleBackColor = true;
+            btnNextFocus.Click += btnNextFocus_Click;
             // 
             // btnWriter
             // 
@@ -126,6 +127,7 @@
             btnWriter.TabIndex = 9;
             btnWriter.Text = "Writer";
             btnWriter.UseVisualStyleBackColor = true;
+            btnWriter.Click += btnWriter_Click;
             // 
             // btnActivate
             // 
@@ -135,6 +137,7 @@
             btnActivate.TabIndex = 10;
             btnActivate.Text = "Activate";
             btnActivate.UseVisualStyleBackColor = true;
+            btnActivate.Click += btnActivate_Click;
             // 
             // btnMakeVisible
             // 
@@ -144,6 +147,7 @@
             btnMakeVisible.TabIndex = 11;
             btnMakeVisible.Text = "Make visible";
             btnMakeVisible.UseVisualStyleBackColor = true;
+            btnMakeVisible.Click += btnMakeVisible_Click;
             // 
             // TextBox
             // 
