@@ -1,3 +1,5 @@
+using System.Runtime.Versioning;
+
 namespace WindowsFormsPractice
 {
     public partial class Form1 : Form
@@ -9,14 +11,18 @@ namespace WindowsFormsPractice
 
         private void btnTextBox_Click(object sender, EventArgs e)
         {
+                    /**CLOSE ALL WINDOWS         
+                                
+                    **/
+
             if (this.MdiChildren.Length > 0)
             {
-                if (MdiChildren[0].Name != "TexBox")
+                if (this.MdiChildren[0].Name != "TextBox")
                 {
-                    DialogResult rs = MessageBox.Show("¿Do you wish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rs == DialogResult.Yes)
                     {
-                        // Problem: Windows are overlapping
+// ******************************        Problem: Windows are overlapping  *************************** Windows never close ***************
                         TextBox frmTexbox = new TextBox();
                         frmTexbox.MdiParent = this;
                         frmTexbox.Dock = DockStyle.Fill;
@@ -35,13 +41,15 @@ namespace WindowsFormsPractice
            
         }
 
+
+
         private void btnTtriangle_Click(object sender, EventArgs e)
         {
             if (this.MdiChildren.Length> 0)
             {
-                if (MdiChildren[0].Name != "TriangleFrom")
+                if (this.MdiChildren[0].Name != "TriangleForm")
                 {
-                    DialogResult rs = MessageBox.Show("¿Do you wish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rs == DialogResult.Yes)
                     {
                         TriangleForm frmTriangle = new TriangleForm();
@@ -103,5 +111,8 @@ namespace WindowsFormsPractice
         {
 
         }
+
     }
+
+   
 }
