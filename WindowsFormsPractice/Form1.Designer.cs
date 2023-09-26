@@ -157,6 +157,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1139, 559);
             Controls.Add(panel1);
+            IsMdiContainer = true;
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);

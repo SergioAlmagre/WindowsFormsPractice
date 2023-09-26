@@ -9,7 +9,10 @@ namespace WindowsFormsPractice
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TextBox frmTexbox = new TextBox();
+            frmTexbox.MdiParent = this;
+            frmTexbox.Dock = DockStyle.Fill;
+            frmTexbox.Show();
         }
     }
 }
