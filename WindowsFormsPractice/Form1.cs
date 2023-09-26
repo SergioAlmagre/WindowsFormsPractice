@@ -37,6 +37,30 @@ namespace WindowsFormsPractice
 
         private void btnTtriangle_Click(object sender, EventArgs e)
         {
+            if (this.MdiChildren.Length> 0)
+            {
+                if (MdiChildren[0].Name != "TriangleFrom")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you wish open again the same windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        TriangleForm frmTriangle = new TriangleForm();
+                        frmTriangle.MdiParent = this;
+                        frmTriangle.Dock = DockStyle.Fill;
+                        frmTriangle.Show();
+                    }
+                }
+            }
+            else
+            {
+                lblWelcome.Hide();
+                TriangleForm frmTriangle = new TriangleForm();
+                frmTriangle.MdiParent = this;
+                frmTriangle.Dock = DockStyle.Fill;
+                frmTriangle.Show();
+            }
+
+
 
         }
 
