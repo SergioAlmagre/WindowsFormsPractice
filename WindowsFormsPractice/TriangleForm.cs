@@ -82,7 +82,6 @@ namespace WindowsFormsPractice
                     }
                 }
 
-
                 if (sameSides == 1)
                 {
                     newImage = Image.FromFile("S:/My Drive/2ºDAM/3 - Interfaces Graficas/Tema 2/Proyectos/WindowsFormsPractice/Resources/isosceles.jpg");
@@ -101,8 +100,12 @@ namespace WindowsFormsPractice
                     pictureBox1.Image = newImage;
                     //MessageBox.Show("Todos son iguales"); 
                 }
-
             }
+        }
+
+        private void txtSideA_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

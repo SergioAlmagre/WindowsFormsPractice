@@ -44,9 +44,9 @@
             // 
             lblSideA.AutoSize = true;
             lblSideA.Font = new Font("MV Boli", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSideA.Location = new Point(76, 79);
+            lblSideA.Location = new Point(87, 105);
             lblSideA.Name = "lblSideA";
-            lblSideA.Size = new Size(106, 39);
+            lblSideA.Size = new Size(136, 49);
             lblSideA.TabIndex = 0;
             lblSideA.Text = "Side A";
             // 
@@ -54,9 +54,9 @@
             // 
             lblSideB.AutoSize = true;
             lblSideB.Font = new Font("MV Boli", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSideB.Location = new Point(75, 195);
+            lblSideB.Location = new Point(86, 260);
             lblSideB.Name = "lblSideB";
-            lblSideB.Size = new Size(104, 39);
+            lblSideB.Size = new Size(132, 49);
             lblSideB.TabIndex = 1;
             lblSideB.Text = "Side B";
             // 
@@ -64,41 +64,46 @@
             // 
             lblSideC.AutoSize = true;
             lblSideC.Font = new Font("MV Boli", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSideC.Location = new Point(76, 312);
+            lblSideC.Location = new Point(87, 416);
             lblSideC.Name = "lblSideC";
-            lblSideC.Size = new Size(103, 39);
+            lblSideC.Size = new Size(132, 49);
             lblSideC.TabIndex = 2;
             lblSideC.Text = "Side C";
             // 
             // txtSideA
             // 
-            txtSideA.Location = new Point(218, 79);
+            txtSideA.Location = new Point(249, 105);
+            txtSideA.Margin = new Padding(3, 4, 3, 4);
             txtSideA.Multiline = true;
             txtSideA.Name = "txtSideA";
-            txtSideA.Size = new Size(112, 39);
+            txtSideA.Size = new Size(127, 51);
             txtSideA.TabIndex = 3;
+            txtSideA.TextChanged += txtSideA_TextChanged;
             // 
             // txtSideB
             // 
-            txtSideB.Location = new Point(217, 195);
+            txtSideB.Location = new Point(248, 260);
+            txtSideB.Margin = new Padding(3, 4, 3, 4);
             txtSideB.Multiline = true;
             txtSideB.Name = "txtSideB";
-            txtSideB.Size = new Size(112, 39);
+            txtSideB.Size = new Size(127, 51);
             txtSideB.TabIndex = 4;
             // 
             // txtSideC
             // 
-            txtSideC.Location = new Point(218, 312);
+            txtSideC.Location = new Point(249, 416);
+            txtSideC.Margin = new Padding(3, 4, 3, 4);
             txtSideC.Multiline = true;
             txtSideC.Name = "txtSideC";
-            txtSideC.Size = new Size(112, 39);
+            txtSideC.Size = new Size(127, 51);
             txtSideC.TabIndex = 5;
             // 
             // btnCheck
             // 
-            btnCheck.Location = new Point(456, 312);
+            btnCheck.Location = new Point(521, 416);
+            btnCheck.Margin = new Padding(3, 4, 3, 4);
             btnCheck.Name = "btnCheck";
-            btnCheck.Size = new Size(262, 39);
+            btnCheck.Size = new Size(299, 52);
             btnCheck.TabIndex = 6;
             btnCheck.Text = "Check";
             btnCheck.UseVisualStyleBackColor = true;
@@ -107,18 +112,19 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(456, 61);
+            pictureBox1.Location = new Point(521, 81);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(262, 229);
+            pictureBox1.Size = new Size(299, 305);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
             // TriangleForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(pictureBox1);
             Controls.Add(btnCheck);
             Controls.Add(txtSideC);
@@ -128,6 +134,7 @@
             Controls.Add(lblSideB);
             Controls.Add(lblSideA);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TriangleForm";
             Text = "TriangleForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
