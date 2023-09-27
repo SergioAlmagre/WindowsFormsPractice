@@ -22,7 +22,7 @@ namespace WindowsFormsPractice
                     DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rs == DialogResult.Yes)
                     {
-// ******************************        Problem: Windows are overlapping  *************************** Windows never close ***************
+                        this.MdiChildren[0].Close();
                         TextBox frmTexbox = new TextBox();
                         frmTexbox.MdiParent = this;
                         frmTexbox.Dock = DockStyle.Fill;
@@ -52,6 +52,7 @@ namespace WindowsFormsPractice
                     DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (rs == DialogResult.Yes)
                     {
+                        this.MdiChildren[0].Close();
                         TriangleForm frmTriangle = new TriangleForm();
                         frmTriangle.MdiParent = this;
                         frmTriangle.Dock = DockStyle.Fill;
@@ -67,14 +68,34 @@ namespace WindowsFormsPractice
                 frmTriangle.Dock = DockStyle.Fill;
                 frmTriangle.Show();
             }
-
-
-
         }
 
         private void btnColors_Click(object sender, EventArgs e)
         {
-
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "colorsForm")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        lblWelcome.Hide();
+                        colorsForm frmColors = new colorsForm();
+                        frmColors.MdiParent = this;
+                        frmColors.Dock = DockStyle.Fill;
+                        frmColors.Show();
+                    }
+                }
+            }
+            else 
+            {
+                lblWelcome.Hide();
+                colorsForm frmColors = new colorsForm();
+                frmColors.MdiParent = this;
+                frmColors.Dock = DockStyle.Fill;
+                frmColors.Show();
+            }
         }
 
         private void btnList_Click(object sender, EventArgs e)
