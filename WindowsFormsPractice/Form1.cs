@@ -11,9 +11,9 @@ namespace WindowsFormsPractice
 
         private void btnTextBox_Click(object sender, EventArgs e)
         {
-                    /**CLOSE ALL WINDOWS         
-                                
-                    **/
+            /**CLOSE ALL WINDOWS         
+                        
+            **/
 
             if (this.MdiChildren.Length > 0)
             {
@@ -38,14 +38,14 @@ namespace WindowsFormsPractice
                 frmTexbox.Dock = DockStyle.Fill;
                 frmTexbox.Show();
             }
-           
+
         }
 
 
 
         private void btnTtriangle_Click(object sender, EventArgs e)
         {
-            if (this.MdiChildren.Length> 0)
+            if (this.MdiChildren.Length > 0)
             {
                 if (this.MdiChildren[0].Name != "TriangleForm")
                 {
@@ -88,7 +88,7 @@ namespace WindowsFormsPractice
                     }
                 }
             }
-            else 
+            else
             {
                 lblWelcome.Hide();
                 colorsForm frmColors = new colorsForm();
@@ -105,6 +105,10 @@ namespace WindowsFormsPractice
 
         private void btnBoxes_Click(object sender, EventArgs e)
         {
+
+
+
+
 
         }
 
@@ -135,5 +139,5 @@ namespace WindowsFormsPractice
 
     }
 
-   
+
 }
