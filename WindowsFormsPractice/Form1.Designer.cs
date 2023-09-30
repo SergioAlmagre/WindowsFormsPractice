@@ -34,7 +34,7 @@ namespace WindowsFormsPractice
             btnTimer = new Button();
             btnCalendars = new Button();
             btnComboBox = new Button();
-            btnBoxes = new Button();
+            btnRadiosChecks = new Button();
             btnList = new Button();
             btnColors = new Button();
             btnTtriangle = new Button();
@@ -50,7 +50,7 @@ namespace WindowsFormsPractice
             panel1.Controls.Add(btnTimer);
             panel1.Controls.Add(btnCalendars);
             panel1.Controls.Add(btnComboBox);
-            panel1.Controls.Add(btnBoxes);
+            panel1.Controls.Add(btnRadiosChecks);
             panel1.Controls.Add(btnList);
             panel1.Controls.Add(btnColors);
             panel1.Controls.Add(btnTtriangle);
@@ -111,15 +111,15 @@ namespace WindowsFormsPractice
             btnComboBox.UseVisualStyleBackColor = true;
             btnComboBox.Click += btnComboBox_Click;
             // 
-            // btnBoxes
+            // btnRadiosChecks
             // 
-            btnBoxes.Location = new Point(27, 234);
-            btnBoxes.Name = "btnBoxes";
-            btnBoxes.Size = new Size(129, 29);
-            btnBoxes.TabIndex = 4;
-            btnBoxes.Text = "Boxes";
-            btnBoxes.UseVisualStyleBackColor = true;
-            btnBoxes.Click += btnBoxes_Click;
+            btnRadiosChecks.Location = new Point(27, 234);
+            btnRadiosChecks.Name = "btnRadiosChecks";
+            btnRadiosChecks.Size = new Size(129, 29);
+            btnRadiosChecks.TabIndex = 4;
+            btnRadiosChecks.Text = "Radios Checks";
+            btnRadiosChecks.UseVisualStyleBackColor = true;
+            btnRadiosChecks.Click += btnBoxes_Click;
             // 
             // btnList
             // 
@@ -191,7 +191,7 @@ namespace WindowsFormsPractice
         private Panel panel1;
         private Button btnTextBox;
         private Button btnComboBox;
-        private Button btnBoxes;
+        private Button btnRadiosChecks;
         private Button btnList;
         private Button btnColors;
         private Button btnTtriangle;
