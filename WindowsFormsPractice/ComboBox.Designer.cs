@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsPractice
 {
-    partial class ComboBox
+    partial class comboBoxForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             txtLastChoosed = new System.Windows.Forms.TextBox();
             txtAddColor = new System.Windows.Forms.TextBox();
             btnAddColor = new Button();
-            cboDropDownStyle = new System.Windows.Forms.ComboBox();
-            cboSimple = new System.Windows.Forms.ComboBox();
-            comboBox1 = new System.Windows.Forms.ComboBox();
+            cboDropDownStyle = new ComboBox();
+            cboSimple = new ComboBox();
+            cboList = new ComboBox();
             SuspendLayout();
             // 
             // lblDropDownStyle
@@ -74,7 +74,7 @@
             // 
             lblShowLastChoosed.AutoSize = true;
             lblShowLastChoosed.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblShowLastChoosed.Location = new Point(65, 292);
+            lblShowLastChoosed.Location = new Point(78, 292);
             lblShowLastChoosed.Name = "lblShowLastChoosed";
             lblShowLastChoosed.Size = new Size(169, 20);
             lblShowLastChoosed.TabIndex = 3;
@@ -82,16 +82,17 @@
             // 
             // txtLastChoosed
             // 
-            txtLastChoosed.Location = new Point(240, 292);
+            txtLastChoosed.Location = new Point(78, 315);
             txtLastChoosed.Name = "txtLastChoosed";
-            txtLastChoosed.Size = new Size(161, 23);
+            txtLastChoosed.Size = new Size(166, 23);
             txtLastChoosed.TabIndex = 4;
+            txtLastChoosed.TextChanged += txtLastChoosed_TextChanged;
             // 
             // txtAddColor
             // 
             txtAddColor.Location = new Point(546, 289);
             txtAddColor.Name = "txtAddColor";
-            txtAddColor.Size = new Size(161, 23);
+            txtAddColor.Size = new Size(166, 23);
             txtAddColor.TabIndex = 5;
             txtAddColor.TextChanged += txtAddColor_TextChanged;
             // 
@@ -103,40 +104,46 @@
             btnAddColor.TabIndex = 6;
             btnAddColor.Text = "Add color to dropDownList";
             btnAddColor.UseVisualStyleBackColor = true;
+            btnAddColor.Click += btnAddColor_Click;
             // 
             // cboDropDownStyle
             // 
+            cboDropDownStyle.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cboDropDownStyle.FormattingEnabled = true;
             cboDropDownStyle.Location = new Point(78, 113);
             cboDropDownStyle.Name = "cboDropDownStyle";
             cboDropDownStyle.Size = new Size(166, 23);
             cboDropDownStyle.TabIndex = 7;
+            cboDropDownStyle.SelectedIndexChanged += cboDropDownStyle_SelectedIndexChanged;
             // 
             // cboSimple
             // 
+            cboSimple.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cboSimple.DropDownStyle = ComboBoxStyle.Simple;
             cboSimple.FormattingEnabled = true;
             cboSimple.Location = new Point(546, 113);
             cboSimple.Name = "cboSimple";
             cboSimple.Size = new Size(166, 23);
             cboSimple.TabIndex = 8;
+            cboSimple.SelectedIndexChanged += cboSimple_SelectedIndexChanged;
             // 
-            // comboBox1
+            // cboList
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.Simple;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(299, 122);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(166, 23);
-            comboBox1.TabIndex = 9;
+            cboList.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboList.FormattingEnabled = true;
+            cboList.Location = new Point(302, 113);
+            cboList.Name = "cboList";
+            cboList.Size = new Size(166, 23);
+            cboList.TabIndex = 9;
+            cboList.SelectedIndexChanged += cboList_SelectedIndexChanged;
             // 
-            // ComboBox
+            // comboBoxForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox1);
+            Controls.Add(cboList);
             Controls.Add(cboSimple);
             Controls.Add(cboDropDownStyle);
             Controls.Add(btnAddColor);
@@ -147,8 +154,9 @@
             Controls.Add(lblDropDownList);
             Controls.Add(lblDropDownStyle);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ComboBox";
+            Name = "comboBoxForm";
             Text = "ComboBox";
+            Load += comboBoxForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,8 +170,8 @@
         private System.Windows.Forms.TextBox txtLastChoosed;
         private System.Windows.Forms.TextBox txtAddColor;
         private Button btnAddColor;
-        private System.Windows.Forms.ComboBox cboDropDownStyle;
-        private System.Windows.Forms.ComboBox cboSimple;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private ComboBox cboDropDownStyle;
+        private ComboBox cboSimple;
+        private ComboBox cboList;
     }
 }

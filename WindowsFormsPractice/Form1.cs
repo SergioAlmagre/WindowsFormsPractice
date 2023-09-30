@@ -131,13 +131,34 @@ namespace WindowsFormsPractice
             }
 
 
-
-
         }
 
         private void btnComboBox_Click(object sender, EventArgs e)
         {
-
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "comboBoxForm")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        lblWelcome.Hide();
+                        comboBoxForm frmCombos = new comboBoxForm();
+                        frmCombos.MdiParent = this;
+                        frmCombos.Dock = DockStyle.Fill;
+                        frmCombos.Show();
+                    }
+                }
+            }
+            else
+            {
+                lblWelcome.Hide();
+                comboBoxForm frmCombos = new comboBoxForm();
+                frmCombos.MdiParent = this;
+                frmCombos.Dock = DockStyle.Fill;
+                frmCombos.Show();
+            }
         }
 
         private void btnCalendars_Click(object sender, EventArgs e)
