@@ -105,7 +105,30 @@ namespace WindowsFormsPractice
 
         private void btnBoxes_Click(object sender, EventArgs e)
         {
-
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "radioChecksForm")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        lblWelcome.Hide();
+                        radiosChecksForm frmRadios = new radiosChecksForm();
+                        frmRadios.MdiParent = this;
+                        frmRadios.Dock = DockStyle.Fill;
+                        frmRadios.Show();
+                    }
+                }
+            }
+            else
+            {
+                lblWelcome.Hide();
+                radiosChecksForm frmRadios = new radiosChecksForm();
+                frmRadios.MdiParent = this;
+                frmRadios.Dock = DockStyle.Fill;
+                frmRadios.Show();
+            }
 
 
 
