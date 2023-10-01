@@ -19,9 +19,16 @@ namespace WindowsFormsPractice
         public listForm()
         {
             InitializeComponent();
-            String[] items = { "Mesa", "Coche","Libro","Maceta","Silla","Estanteria","Lampara","Rotuladores","Ventilador","Ordenador" };
-            foreach (string i in items) { 
+            string[] items = { "Table", "Car", "Book", "Plant pot", "Chair", "Bookshelf", "Lamp", "Markers", "Fan", "Computer" };
+            string[] fruits = { "Orange", "Apple", "Watermelon", "Banana", "pear", "kiwi" };
+            foreach (string i in items)
+            {
                 lstItems.Items.Add(i);
+                rboSimple.Checked = true;
+            }
+            foreach (string f in fruits)
+            {
+                chklFruits.Items.Add(f);
             }
         }
 
@@ -30,7 +37,7 @@ namespace WindowsFormsPractice
             Boolean selected = false;
             int index = lstItems.SelectedIndex;
             ix = index;
-            if(lstItems.SelectedItem != null)
+            if (lstItems.SelectedItem != null)
             {
                 lblItemSelected.Text = lstItems.Items[index].ToString() + " is selected";
                 selected = true;
@@ -45,22 +52,36 @@ namespace WindowsFormsPractice
 
         private void txtAddSearch_TextChanged(object sender, EventArgs e)
         {
-        
+
         }
 
         private void chkSort_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkSort.Checked)
+            {
+                lstItems.Sorted = true;
+            }
+            else
+            {
+                lstItems.Sorted = false;
+            }
         }
 
         private void chkShowInColums_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkShowInColums.Checked)
+            {
+                lstItems.MultiColumn = true;
+            }
+            else
+            {
+                lstItems.MultiColumn = false;
+            }
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            if(txtAddSearch.Text != "")
+            if (txtAddSearch.Text != "")
             {
                 if (lstItems.Items.Contains(txtAddSearch.Text))
                 {
@@ -76,7 +97,7 @@ namespace WindowsFormsPractice
 
         private void btnAddFruit_Click(object sender, EventArgs e)
         {
-            if(txtAddSearch.Text != "")
+            if (txtAddSearch.Text != "")
             {
                 if (chklFruits.Items.Contains(txtAddSearch.Text))
                 {
@@ -98,6 +119,7 @@ namespace WindowsFormsPractice
                 {
                     MessageBox.Show("Founded in Items list" + "\n" + txtAddSearch.Text);
                     lstItems.SelectedItem = item;
+                    return;
                 }
             }
             foreach (var item in lstTransferedItems.Items)
@@ -105,29 +127,53 @@ namespace WindowsFormsPractice
                 if (item.ToString().ToUpper() == txtAddSearch.Text.ToUpper())
                 {
                     MessageBox.Show("Founded in Transfered list" + "\n" + txtAddSearch.Text);
-                    lstItems.SelectedItem = item;
+                    lstTransferedItems.SelectedItem = item;
+                    return;
+                }
+            }
+            foreach (var item in chklFruits.Items)
+            {
+                if (item.ToString().ToUpper() == txtAddSearch.Text.ToUpper())
+                {
+                    MessageBox.Show("Founded in Fruit list" + "\n" + txtAddSearch.Text);
+                    chklFruits.SelectedItem = item;
+                    return;
                 }
             }
         }
 
         private void rboSimple_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rboSimple.Checked)
+            {
+                lstItems.SelectionMode = SelectionMode.One;
+                lstTransferedItems.SelectionMode = SelectionMode.One;
+                chklFruits.SelectionMode = SelectionMode.One;
+            }
         }
 
         private void rboMultiple_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rboMultiple.Checked)
+            {
+                lstItems.SelectionMode = SelectionMode.MultiSimple;
+                lstTransferedItems.SelectionMode = SelectionMode.MultiSimple;
+                //               chklFruits.SelectionMode = SelectionMode.MultiSimple; not work
+            }
         }
 
         private void rboExtended_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rboExtended.Checked)
+            {
+                lstItems.SelectionMode = SelectionMode.MultiExtended;
+                lstTransferedItems.SelectionMode = SelectionMode.MultiExtended;
+            }
         }
 
         private void grpRadios_Enter(object sender, EventArgs e)
         {
-
+            // here the selected work like a check and uncheck, you need push 2 times
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -141,13 +187,13 @@ namespace WindowsFormsPractice
 
             for (int i = 0; i < chklFruits.Items.Count; i++)
             {
-             chklFruits.SetItemChecked(i, false);
+                chklFruits.SetItemChecked(i, false);
             }
         }
 
         private void btnTransferLR_Click(object sender, EventArgs e)
         {
-            if(lstItems.SelectedIndex != -1) // One way to do it
+            if (lstItems.SelectedIndex != -1) // One way to do it
             {
                 lstTransferedItems.Items.Add(lstItems.SelectedItem);
                 ix = lstItems.SelectedIndex;
@@ -195,18 +241,26 @@ namespace WindowsFormsPractice
 
         private void btnTransferRL_Click(object sender, EventArgs e)
         {
-           if (chklFruits.SelectedItem != null) // other way to do it
+            if (chklFruits.SelectedItem != null) // other way to do it
             {
                 lstTransferedItems.Items.Add(chklFruits.SelectedItem);
                 chklFruits.Items.Remove(chklFruits.SelectedItem);
             }
 
-            
+
         }
 
         private void lblItemSelected_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void chkCollectionEditor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkCollectionEditor.Checked)
+            {
+                // without function
+            }
         }
     }
 }

@@ -34,9 +34,9 @@
             lblItemList = new Label();
             lblTransferedList = new Label();
             grpRadios = new GroupBox();
-            rboSimple = new RadioButton();
-            rboMultiple = new RadioButton();
             rboExtended = new RadioButton();
+            rboMultiple = new RadioButton();
+            rboSimple = new RadioButton();
             btnTransferLR = new Button();
             chkSort = new CheckBox();
             chkShowInColums = new CheckBox();
@@ -50,6 +50,7 @@
             chklFruits = new CheckedListBox();
             lblFruits = new Label();
             btnAddFruit = new Button();
+            chkCollectionEditor = new CheckBox();
             grpRadios.SuspendLayout();
             SuspendLayout();
             // 
@@ -117,17 +118,17 @@
             grpRadios.TabStop = false;
             grpRadios.Enter += grpRadios_Enter;
             // 
-            // rboSimple
+            // rboExtended
             // 
-            rboSimple.AutoSize = true;
-            rboSimple.Location = new Point(23, 22);
-            rboSimple.Name = "rboSimple";
-            rboSimple.Size = new Size(61, 19);
-            rboSimple.TabIndex = 0;
-            rboSimple.TabStop = true;
-            rboSimple.Text = "Simple";
-            rboSimple.UseVisualStyleBackColor = true;
-            rboSimple.CheckedChanged += rboSimple_CheckedChanged;
+            rboExtended.AutoSize = true;
+            rboExtended.Location = new Point(23, 102);
+            rboExtended.Name = "rboExtended";
+            rboExtended.Size = new Size(74, 19);
+            rboExtended.TabIndex = 2;
+            rboExtended.TabStop = true;
+            rboExtended.Text = "Extended";
+            rboExtended.UseVisualStyleBackColor = true;
+            rboExtended.CheckedChanged += rboExtended_CheckedChanged;
             // 
             // rboMultiple
             // 
@@ -141,17 +142,17 @@
             rboMultiple.UseVisualStyleBackColor = true;
             rboMultiple.CheckedChanged += rboMultiple_CheckedChanged;
             // 
-            // rboExtended
+            // rboSimple
             // 
-            rboExtended.AutoSize = true;
-            rboExtended.Location = new Point(23, 102);
-            rboExtended.Name = "rboExtended";
-            rboExtended.Size = new Size(74, 19);
-            rboExtended.TabIndex = 2;
-            rboExtended.TabStop = true;
-            rboExtended.Text = "Extended";
-            rboExtended.UseVisualStyleBackColor = true;
-            rboExtended.CheckedChanged += rboExtended_CheckedChanged;
+            rboSimple.AutoSize = true;
+            rboSimple.Location = new Point(23, 22);
+            rboSimple.Name = "rboSimple";
+            rboSimple.Size = new Size(61, 19);
+            rboSimple.TabIndex = 0;
+            rboSimple.TabStop = true;
+            rboSimple.Text = "Simple";
+            rboSimple.UseVisualStyleBackColor = true;
+            rboSimple.CheckedChanged += rboSimple_CheckedChanged;
             // 
             // btnTransferLR
             // 
@@ -167,7 +168,7 @@
             // chkSort
             // 
             chkSort.AutoSize = true;
-            chkSort.Location = new Point(37, 317);
+            chkSort.Location = new Point(37, 307);
             chkSort.Name = "chkSort";
             chkSort.Size = new Size(47, 19);
             chkSort.TabIndex = 7;
@@ -178,7 +179,7 @@
             // chkShowInColums
             // 
             chkShowInColums.AutoSize = true;
-            chkShowInColums.Location = new Point(37, 352);
+            chkShowInColums.Location = new Point(37, 337);
             chkShowInColums.Name = "chkShowInColums";
             chkShowInColums.Size = new Size(110, 19);
             chkShowInColums.TabIndex = 8;
@@ -286,12 +287,24 @@
             btnAddFruit.UseVisualStyleBackColor = true;
             btnAddFruit.Click += btnAddFruit_Click;
             // 
+            // chkCollectionEditor
+            // 
+            chkCollectionEditor.AutoSize = true;
+            chkCollectionEditor.Location = new Point(37, 366);
+            chkCollectionEditor.Name = "chkCollectionEditor";
+            chkCollectionEditor.Size = new Size(114, 19);
+            chkCollectionEditor.TabIndex = 19;
+            chkCollectionEditor.Text = "Collection editor";
+            chkCollectionEditor.UseVisualStyleBackColor = true;
+            chkCollectionEditor.CheckedChanged += chkCollectionEditor_CheckedChanged;
+            // 
             // listForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(953, 433);
+            Controls.Add(chkCollectionEditor);
             Controls.Add(btnAddFruit);
             Controls.Add(lblFruits);
             Controls.Add(chklFruits);
@@ -344,5 +357,6 @@
         private CheckedListBox chklFruits;
         private Label lblFruits;
         private Button btnAddFruit;
+        private CheckBox chkCollectionEditor;
     }
 }
