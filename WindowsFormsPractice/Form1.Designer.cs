@@ -57,15 +57,17 @@ namespace WindowsFormsPractice
             panel1.Controls.Add(btnTextBox);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(188, 559);
+            panel1.Size = new Size(164, 430);
             panel1.TabIndex = 0;
             // 
             // btnImagesList
             // 
-            btnImagesList.Location = new Point(27, 484);
+            btnImagesList.Location = new Point(24, 363);
+            btnImagesList.Margin = new Padding(3, 2, 3, 2);
             btnImagesList.Name = "btnImagesList";
-            btnImagesList.Size = new Size(129, 29);
+            btnImagesList.Size = new Size(113, 22);
             btnImagesList.TabIndex = 9;
             btnImagesList.Text = "Images list";
             btnImagesList.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@ namespace WindowsFormsPractice
             // 
             // btnColorRange
             // 
-            btnColorRange.Location = new Point(27, 430);
+            btnColorRange.Location = new Point(24, 322);
+            btnColorRange.Margin = new Padding(3, 2, 3, 2);
             btnColorRange.Name = "btnColorRange";
-            btnColorRange.Size = new Size(129, 29);
+            btnColorRange.Size = new Size(113, 22);
             btnColorRange.TabIndex = 8;
             btnColorRange.Text = "Color range";
             btnColorRange.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@ namespace WindowsFormsPractice
             // 
             // btnTimer
             // 
-            btnTimer.Location = new Point(27, 384);
+            btnTimer.Location = new Point(24, 288);
+            btnTimer.Margin = new Padding(3, 2, 3, 2);
             btnTimer.Name = "btnTimer";
-            btnTimer.Size = new Size(129, 29);
+            btnTimer.Size = new Size(113, 22);
             btnTimer.TabIndex = 7;
             btnTimer.Text = "Timer";
             btnTimer.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@ namespace WindowsFormsPractice
             // 
             // btnCalendars
             // 
-            btnCalendars.Location = new Point(27, 334);
+            btnCalendars.Location = new Point(24, 250);
+            btnCalendars.Margin = new Padding(3, 2, 3, 2);
             btnCalendars.Name = "btnCalendars";
-            btnCalendars.Size = new Size(129, 29);
+            btnCalendars.Size = new Size(113, 22);
             btnCalendars.TabIndex = 6;
             btnCalendars.Text = "Calendars";
             btnCalendars.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@ namespace WindowsFormsPractice
             // 
             // btnComboBox
             // 
-            btnComboBox.Location = new Point(27, 285);
+            btnComboBox.Location = new Point(24, 214);
+            btnComboBox.Margin = new Padding(3, 2, 3, 2);
             btnComboBox.Name = "btnComboBox";
-            btnComboBox.Size = new Size(129, 29);
+            btnComboBox.Size = new Size(113, 22);
             btnComboBox.TabIndex = 5;
             btnComboBox.Text = "ComboBox";
             btnComboBox.UseVisualStyleBackColor = true;
@@ -113,9 +119,10 @@ namespace WindowsFormsPractice
             // 
             // btnRadiosChecks
             // 
-            btnRadiosChecks.Location = new Point(27, 234);
+            btnRadiosChecks.Location = new Point(24, 176);
+            btnRadiosChecks.Margin = new Padding(3, 2, 3, 2);
             btnRadiosChecks.Name = "btnRadiosChecks";
-            btnRadiosChecks.Size = new Size(129, 29);
+            btnRadiosChecks.Size = new Size(113, 22);
             btnRadiosChecks.TabIndex = 4;
             btnRadiosChecks.Text = "Radios Checks";
             btnRadiosChecks.UseVisualStyleBackColor = true;
@@ -123,9 +130,10 @@ namespace WindowsFormsPractice
             // 
             // btnList
             // 
-            btnList.Location = new Point(27, 183);
+            btnList.Location = new Point(24, 137);
+            btnList.Margin = new Padding(3, 2, 3, 2);
             btnList.Name = "btnList";
-            btnList.Size = new Size(129, 29);
+            btnList.Size = new Size(113, 22);
             btnList.TabIndex = 3;
             btnList.Text = "List";
             btnList.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@ namespace WindowsFormsPractice
             // 
             // btnColors
             // 
-            btnColors.Location = new Point(27, 132);
+            btnColors.Location = new Point(24, 99);
+            btnColors.Margin = new Padding(3, 2, 3, 2);
             btnColors.Name = "btnColors";
-            btnColors.Size = new Size(129, 29);
+            btnColors.Size = new Size(113, 22);
             btnColors.TabIndex = 2;
             btnColors.Text = "Colors";
             btnColors.UseVisualStyleBackColor = true;
@@ -143,9 +152,10 @@ namespace WindowsFormsPractice
             // 
             // btnTtriangle
             // 
-            btnTtriangle.Location = new Point(27, 84);
+            btnTtriangle.Location = new Point(24, 63);
+            btnTtriangle.Margin = new Padding(3, 2, 3, 2);
             btnTtriangle.Name = "btnTtriangle";
-            btnTtriangle.Size = new Size(129, 29);
+            btnTtriangle.Size = new Size(113, 22);
             btnTtriangle.TabIndex = 1;
             btnTtriangle.Text = "Triangle";
             btnTtriangle.UseVisualStyleBackColor = true;
@@ -153,9 +163,10 @@ namespace WindowsFormsPractice
             // 
             // btnTextBox
             // 
-            btnTextBox.Location = new Point(27, 33);
+            btnTextBox.Location = new Point(24, 25);
+            btnTextBox.Margin = new Padding(3, 2, 3, 2);
             btnTextBox.Name = "btnTextBox";
-            btnTextBox.Size = new Size(129, 29);
+            btnTextBox.Size = new Size(113, 22);
             btnTextBox.TabIndex = 0;
             btnTextBox.Text = "TextBox";
             btnTextBox.UseVisualStyleBackColor = true;
@@ -165,20 +176,21 @@ namespace WindowsFormsPractice
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Bookman Old Style", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            lblWelcome.Location = new Point(473, 224);
+            lblWelcome.Location = new Point(414, 168);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(383, 90);
+            lblWelcome.Size = new Size(307, 72);
             lblWelcome.TabIndex = 3;
             lblWelcome.Text = "Welcome";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1139, 559);
+            ClientSize = new Size(1117, 430);
             Controls.Add(lblWelcome);
             Controls.Add(panel1);
             IsMdiContainer = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
