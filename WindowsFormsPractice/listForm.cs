@@ -246,8 +246,6 @@ namespace WindowsFormsPractice
                 lstTransferedItems.Items.Add(chklFruits.SelectedItem);
                 chklFruits.Items.Remove(chklFruits.SelectedItem);
             }
-
-
         }
 
         private void lblItemSelected_Click(object sender, EventArgs e)
