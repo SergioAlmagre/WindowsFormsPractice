@@ -213,7 +213,30 @@ namespace WindowsFormsPractice
 
         private void btnTimer_Click(object sender, EventArgs e)
         {
-
+            if (this.MdiChildren.Length > 0)
+            {
+                if (this.MdiChildren[0].Name != "c")
+                {
+                    DialogResult rs = MessageBox.Show("¿Do you wish open other windows?, You will lose your data", "Atention!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        this.MdiChildren[0].Close();
+                        lblWelcome.Hide();
+                        timerForm frmTimerForm = new timerForm();
+                        frmTimerForm.MdiParent = this;
+                        frmTimerForm.Dock = DockStyle.Fill;
+                        frmTimerForm.Show();
+                    }
+                }
+            }
+            else
+            {
+                lblWelcome.Hide();
+                timerForm frmTimerForm = new timerForm();
+                frmTimerForm.MdiParent = this;
+                frmTimerForm.Dock = DockStyle.Fill;
+                frmTimerForm.Show();
+            }
         }
 
         private void btnColorRange_Click(object sender, EventArgs e)
